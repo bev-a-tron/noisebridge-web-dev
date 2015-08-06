@@ -1,6 +1,34 @@
+body {
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/*
+- content-box sizing normally, which sets height and width of content, not including padding and margin.
+- use border-box sizing to make height and width include padding and margin.
+*/
+
+
 h1 {
   color: red;
-  font-size: 10px;
+  font-size: 30px;
+  background-color: yellow;
+  border: 5px solid black;
+  padding: 20px;
+  margin: 20px;
+  height: 200px;
+  width: 200px;
+}
+
+h2 {
+  display: inline;
+}
+
+section.afterward p {
+  color: blue;
 }
 
 p {
@@ -10,6 +38,28 @@ p {
 
 .before-list {
   font-size: 120%;
+}
+
+.before-list.for-example, .before-list .for-example {
+  font-family: sans-serif;
+}
+
+section.afterward p.goodbye {
+  text-decoration: underline;
+}
+
+a {
+  display: block;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+  color: pink;
+}
+
+ol li {
+  color: pink;
 }
 
 /*

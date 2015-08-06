@@ -4,27 +4,40 @@
     <title>My AWESOME website</title>
     <link href="style.css" rel="stylesheet">
   </head>
-  <body>
-    <h1>My Awesome Website</h1>
+  <body class="before-list">
+    <!--<h1 style="-->
+    <!--background: yellow;-->
+    <!--border: 5px solid black;-->
+    <!--padding: 20px;-->
+    <!--margin: 30px;-->
+            <!--">-->
+    <h1>
+    My Awesome Website<br>
+    Yay!</h1>
+    This is outside the h1 block.
     <h2>It's great</h2>
-    <p>
+    <p class="for-example">
       Hello and welcome to my site.
       <a href="http://www.google.com">
         Here is another site.
       </a>
     </p>
-    <p class="before-list">
+    <p class="before-list for-example">
       You can write as much text as you want. For example:
     </p>
     <ol type="I">
       <li>Here's some text</li>
-      <li>Here's some text</li>
+      <li class="before-list">Here's some text</li>
       <li>aaaand here's some text</li>
     </ol>
     <section class="afterward">
+      <h1 class="goodbye">Goodbye!</h1>
       <p>Thanks for coming to my site.</p>
-      <p>Hope to see you again!</p>
+      <p class="goodbye">Hope to see you again!</p>
     </section>
+    <div class="afterward">
+      <p class="goodbye">A second afterward?!!!  Whaaaa?</p>
+    </div>
     <script src="script.js"></script>
   </body>
 </html>
