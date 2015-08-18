@@ -9,3 +9,14 @@ console.log(sum);
 //var isItFifteen = confirm("Is the sum 15??");
 //
 //sum = prompt("What is the sum?");
+
+var age = prompt("How old are you?");
+age = parseInt(age, 10);
+
+if (isNaN(age)) {
+    alert("You screwed up!");
+} else if (age < 200) {
+    alert("You're so young!");
+} else {
+    alert("You're old!");
+}
