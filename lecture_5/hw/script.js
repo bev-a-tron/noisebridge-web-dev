@@ -3,9 +3,12 @@ var createName = function (first, last) {
 };
 
 var askName = function () {
-    var first = prompt('What is your first name?');
-    var last = prompt('What is your last name?');
-    var fullName = createName(first, last);
+    fullName = '';
+    while (fullName !== 'Murray Stenson') {
+        var first = prompt('What is your first name?');
+        var last = prompt('What is your last name?');
+        var fullName = createName(first, last);
+    }
     alert('Your name is ' + fullName + '!');
 };
 
