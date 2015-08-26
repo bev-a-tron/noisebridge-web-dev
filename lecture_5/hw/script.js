@@ -12,4 +12,7 @@ var askName = function () {
     alert('Your name is ' + fullName + '!');
 };
 
-askName();
+//askName();
+
+var asker = document.getElementById("asker");
+asker.onclick = askName;
