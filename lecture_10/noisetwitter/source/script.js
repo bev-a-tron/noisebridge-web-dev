@@ -2,22 +2,46 @@ var tweetboxField = $('.tweetbox__field');
 var tweets = $('.tweets');
 var maxCharacters = 140;
 
-$('.tweetbox').on('submit', function (event) {
-  event.preventDefault();
+var addNewTweet = function (response) {
 
   var newTweet = $('.tweet').first().clone();
 
-  var textAreaValue = tweetboxField.val();
-
-  newTweet.find('.tweet__content').text(textAreaValue);
+  newTweet.find('.tweet__content').text(response.tweet_content);
+  newTweet.find('.tweet__author').text(response.tweet_author);
+  newTweet.find('.tweet__avatar img').prop('src', response.tweet_avatar);
   newTweet.find('.tweet__time').text('now');
 
   newTweet.removeClass('favorited retweeted');
 
   tweets.prepend(newTweet);
 
-  tweetboxField.val('');
+};
+
+$('.tweetbox').on('submit', function (event) {
+  event.preventDefault();
+
+  $.ajax('/tweet.php', {
+    data: $('.tweetbox').serialize(),
+    dataType: 'json',
+    method: 'POST'
+  }).done(function (response) {
+    console.log(response);
+
+    addNewTweet(response);
+
+    tweetboxField.val('');
+
+  }).fail(function () {
+    alert('oh no!');
+  });
+
 });
+
+setInterval(function () {
+  $.ajax('/tweet.php', {
+    dataType: 'json'
+  }).done(addNewTweet);  // calls this with response as an argument
+}, 5000);  // milliseconds
 
 var calculateRemainingCharacters = function () {
   var textAreaValue = tweetboxField.val();
@@ -31,12 +55,12 @@ calculateRemainingCharacters();
 
 
 
-$('.tweetbox__field').on('keyup', calculateRemainingCharacters);
+tweetboxField.on('keyup', calculateRemainingCharacters);
 
-$('.tweets').on('click', '.retweet', function () {
+tweets.on('click', '.retweet', function () {
   $(this).closest('.tweet').toggleClass('retweeted');
 });
 
-$('.tweets').on('click', '.favorite', function () {
+tweets.on('click', '.favorite', function () {
   $(this).closest('.tweet').toggleClass('favorited');
 });
