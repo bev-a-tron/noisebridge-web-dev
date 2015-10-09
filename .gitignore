@@ -1,2 +1,4 @@
 .idea
 *~
+redux/node_modules
+redux/dist.js
