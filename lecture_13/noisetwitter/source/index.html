@@ -4,8 +4,9 @@
     <title>NoiseTwitter</title>
     <link href="style.css" rel="stylesheet" type="text/css">
   </head>
-  <body ng-app="NoiseTwitter" ng-controller="MainController">
-    <!--<script type="text/ng-template" id="index.html">-->
+  <body ng-app="NoiseTwitter">
+    <div ng-view></div>
+    <script type="text/ng-template" id="main.html">
       <form method="post" class="tweetbox cf" ng-submit="addNewTweet()">
         <textarea name="tweet_content" class="tweetbox__field" placeholder="Compose new Tweet..." ng-model="newTweet"></textarea>
         <input class="tweetbox__button" type="submit" value="Tweet" ng-disabled="newTweet.length > 140">
@@ -16,7 +17,11 @@
           <tweet data="tweetObj" hello="world"></tweet>
         </div>
       </section>
-    <!-- /script -->
+    </script>
+
+    <script type="text/ng-template" id="show.html">
+      {{tweet.content}}
+    </script>
 
     <script type="text/ng-template" id="tweet.html">
       <article class="tweet cf" ng-class="{retweeted: data.retweeted, favorited: data.favorited}">
@@ -34,6 +39,7 @@
     </script>
     <script src="jquery.js"></script>
     <script src="angular.min.js"></script>
+    <script src="angular-route.js"></script>
     <script src="script.js"></script>
   </body>
 </html>
