@@ -24,13 +24,6 @@ angular.module('NoiseTwitter').controller('MainController', ['$scope', function(
     }
   ];
 
-  $scope.toggleRetweet = function (tweet) {
-    tweet.retweeted = !tweet.retweeted;
-  };
-  $scope.toggleFavorite = function (tweet) {
-    tweet.favorited = !tweet.favorited;
-  };
-
   $scope.addNewTweet = function () {
     var newTweetObj = {
       author: 'JeffreyATW',
@@ -51,8 +44,18 @@ angular.module('NoiseTwitter').directive('tweet', [function () {
   return {
     replace: true,  // replace the element it's in
     restrict: 'EA', // E stands for element, A stands for attribute, C for class
-    link: function () {
-      console.log('this should tweet three times!');
+    scope: {
+      data: '=',  // two way binding
+      /* hello: '@',  // for strings
+      func: '&' */
+    },  // only can affect stuff specified inside here
+    link: function ($scope, $element, $attrs) {  // element is the view, attrs are the attributes added to the elt
+      $scope.toggleRetweet = function () {
+        $scope.data.retweeted = !$scope.data.retweeted;
+      };
+      $scope.toggleFavorite = function () {
+        $scope.data.favorited = !$scope.data.favorited;
+      };
     },
     templateUrl: 'tweet.html'  // looks for this in the cache, which comes from text/ng-template
   }
