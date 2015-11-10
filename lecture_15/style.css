@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: sans-serif;
+}
+
+.reopening {
+    background: red;
+    color: yellow;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    border: 3px solid black;
+    height: 300px;
+    width: 400px;
+}
+
+.price {
+    font-size: 3em;
+    color: red;
+}
