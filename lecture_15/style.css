@@ -6,23 +6,59 @@ html {
     font-family: sans-serif;
 }
 
+body {
+    margin: 0 auto;
+    width: 960px;
+    position: relative;
+    top: 50px;
+}
+
+h1 {
+    text-align: center;
+}
+
 .reopening {
     background: red;
     color: yellow;
+    position: absolute;
+    left: 100px;
 }
 
 ul {
     list-style: none;
     padding: 0;
+    height: 600px;
+    position: relative;
 }
 
 li {
     border: 3px solid black;
     height: 300px;
-    width: 400px;
+    width: 480px;
+    position: absolute;
 }
 
 .price {
     font-size: 3em;
     color: red;
+}
+
+.cheese {
+    top: 0;
+    left: 0;
+}
+
+.chicken {
+    top: 0;
+    right: 0;
+}
+
+.fruit {
+    bottom: 0;
+    left: 0;
+}
+
+.bread {
+    bottom: 0;
+    right: 0;
 }
