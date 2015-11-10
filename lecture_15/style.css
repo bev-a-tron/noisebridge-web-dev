@@ -89,7 +89,33 @@ li h2 {
     left: 0;
 }
 
+.fruit h2 {
+    right: 20px;
+    top: 20px;
+}
+
 .bread {
     bottom: 0;
     right: 0;
+}
+
+.bread h2, .bread .price {
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.bread img {
+    left: 50%;
+    top: 50%;
+    margin-left: -200px;
+    margin-top: -132.5px;
+}
+
+.bread h2 {
+    top: 20px;
+}
+
+.bread .price {
+    bottom: 0;
 }
