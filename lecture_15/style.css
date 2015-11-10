@@ -22,6 +22,8 @@ h1 {
     color: yellow;
     position: absolute;
     left: 100px;
+    top: 0;
+    margin: 0;
 }
 
 ul {
@@ -38,6 +40,15 @@ li {
     position: absolute;
 }
 
+li h2, li img, li .price {
+    position: absolute;
+}
+
+li h2 {
+    margin: 0;
+    z-index: 1;
+}
+
 .price {
     font-size: 3em;
     color: red;
@@ -48,9 +59,29 @@ li {
     left: 0;
 }
 
+.cheese h2 {
+    top: 20px;
+    left: 20px;
+}
+
+.cheese img {
+    bottom: 0;
+    left: 0;
+}
+
+.cheese .price {
+    top: 0;
+    right: 0;
+}
+
 .chicken {
     top: 0;
     right: 0;
+}
+
+.chicken h2 {
+    bottom: 20px;
+    right: 20px;
 }
 
 .fruit {
