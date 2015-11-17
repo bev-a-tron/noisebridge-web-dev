@@ -1,13 +1,17 @@
 html {
     background: #A4D2E5;
+    font-family: sans-serif;
 }
 
 header {
     background: #1FFFFF;
+    padding: 20px;
 }
 
 .callout {
     border: 2px inset;
+    padding: 10px;
+    width: 125px;
 }
 
 .callout--first {
@@ -19,6 +23,10 @@ header {
 }
 
 /* .callout--first and .callout--second: block element modifier syntax */
+
+h1 {
+    text-align: center;
+}
 
 aside {
     background: #FE9D00;
