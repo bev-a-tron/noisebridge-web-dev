@@ -6,6 +6,20 @@ header {
     background: #1FFFFF;
 }
 
+.callout {
+    border: 2px inset;
+}
+
+.callout--first {
+    float: left;
+}
+
+.callout--second {
+    float: right;
+}
+
+/* .callout--first and .callout--second: block element modifier syntax */
+
 aside {
     background: #FE9D00;
 }
