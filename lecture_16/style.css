@@ -3,6 +3,11 @@ html {
     font-family: sans-serif;
 }
 
+body {
+    margin: 0 auto;
+    width: 1000px;
+}
+
 header {
     background: #1FFFFF;
     padding: 20px;
@@ -30,8 +35,12 @@ h1 {
 
 aside {
     background: #FE9D00;
+    float: left;
+    width: 200px;
 }
 
 section {
     background: #FFF;
+    width: 600px;
+    float: left;
 }
