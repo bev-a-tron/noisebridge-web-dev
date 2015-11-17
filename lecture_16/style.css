@@ -8,6 +8,19 @@ body {
     width: 1000px;
 }
 
+main {
+    background: #FE9D00;
+}
+
+/* pseudo elements: before and after, for each element on the page */
+main::after {
+    clear: left;
+    content: '';
+    display: table;
+}
+
+/* tables don't stretch across the page, block does */
+
 header {
     background: #1FFFFF;
     padding: 20px;
@@ -34,7 +47,6 @@ h1 {
 }
 
 aside {
-    background: #FE9D00;
     float: left;
     width: 200px;
 }
