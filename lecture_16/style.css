@@ -14,7 +14,7 @@ main {
 
 /* pseudo elements: before and after, for each element on the page */
 main::after {
-    clear: left;
+    clear: both;
     content: '';
     display: table;
 }
@@ -57,6 +57,10 @@ section {
     float: left;
 }
 
-.copyright {
-    clear: left;
+section h3 {
+    clear: right;
+}
+
+figure {
+    float: right;
 }
