@@ -44,3 +44,7 @@ section {
     width: 600px;
     float: left;
 }
+
+.copyright {
+    clear: left;
+}
