@@ -4,7 +4,9 @@ $skyblue: #77A2B5;
 
 /* placeholder rule */
 %image-replace {
+  overflow: hidden;
   text-indent: 100%;
+  white-space: nowrap;
 }
 
 header {
@@ -12,6 +14,9 @@ header {
 
   h1 {
     @extend %image-replace;
+    background: image-url('logo.png') no-repeat;
+    height: image-height('logo.png');
+    width: image-width('logo.png');
   }
 }
 
