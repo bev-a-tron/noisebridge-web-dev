@@ -72,5 +72,9 @@ footer {
 
   h2 {
     @extend %image-replace;
+    background: image-url('logo_small.png') no-repeat;
+    height: image-height('logo_small.png');
+    width: image-width('logo_small.png');
+    margin: 0;
   }
 }
