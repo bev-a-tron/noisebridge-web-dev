@@ -10,13 +10,29 @@ $skyblue: #77A2B5;
 }
 
 header {
+  align-items: center;
   background: $teal;
+  display: flex;
+  justify-content: space-between;
 
   h1 {
     @extend %image-replace;
     background: image-url('logo.png') no-repeat;
     height: image-height('logo.png');
     width: image-width('logo.png');
+  }
+}
+
+a {
+  text-decoration: none;
+}
+
+.login {
+  color: $navy;
+  font-size: 14px;
+
+  a {
+    color: $skyblue;
   }
 }
 
