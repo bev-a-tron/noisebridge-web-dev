@@ -42,6 +42,20 @@ a {
 
 nav {
   background: $navy;
+
+  ul {
+    display: flex;
+    margin: 0;
+    list-style: none;
+    padding: 0;
+  }
+
+  a {
+    color: $skyblue;
+    padding: 0 20px;
+    line-height: 36px;
+    display: block;
+  }
 }
 
 footer {
