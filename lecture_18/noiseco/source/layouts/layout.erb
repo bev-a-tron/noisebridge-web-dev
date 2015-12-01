@@ -15,37 +15,17 @@
 
   <body class="<%= page_classes %>">
     <header>
-    <h1>NoiseCo</h1>
-    <div class='login'>
-        Welcome, Jeffrey
-        <a href="#">My Account</a>
-        <a href="#">Log Out</a>
+    <div class="container">
+        <h1>NoiseCo</h1>
+        <div class='login'>
+            Welcome, Jeffrey
+            <a href="#">My Account</a>
+            <a href="#">Log Out</a>
+        </div>
     </div>
     </header>
     <nav>
-        <ul>
-            <li>
-                <a href="#">Home</a>
-            </li>
-            <li>
-                <a href="#">About</a>
-            </li>
-            <li>
-                <a href="#">Clients</a>
-            </li>
-            <li>
-                <a href="">Testimonials</a>
-            </li>
-            <li>
-                <a href="#">Contact Us</a>
-            </li>
-        </ul>
-    </nav>
-    <%= yield %>
-
-    <footer>
-        <h2>NoiseCo</h2>
-        <nav>
+        <div class="container">
             <ul>
                 <li>
                     <a href="#">Home</a>
@@ -63,10 +43,36 @@
                     <a href="#">Contact Us</a>
                 </li>
             </ul>
-        </nav>
-        <small>
-            © 2015 NoiseCo. All rights reversed.
-        </small>
+        </div>
+    </nav>
+    <%= yield %>
+
+    <footer>
+        <div class="container">
+            <h2>NoiseCo</h2>
+            <nav>
+                <ul>
+                    <li>
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">About</a>
+                    </li>
+                    <li>
+                        <a href="#">Clients</a>
+                    </li>
+                    <li>
+                        <a href="">Testimonials</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact Us</a>
+                    </li>
+                </ul>
+            </nav>
+            <small>
+                © 2015 NoiseCo. All rights reversed.
+            </small>
+        </div>
     </footer>
   </body>
 </html>

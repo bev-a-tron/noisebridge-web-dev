@@ -9,17 +9,26 @@ $skyblue: #77A2B5;
   white-space: nowrap;
 }
 
+.container {
+  margin: 0 auto;
+  width: 960px;
+}
+
 header {
-  align-items: center;
   background: $teal;
-  display: flex;
-  justify-content: space-between;
 
   h1 {
     @extend %image-replace;
     background: image-url('logo.png') no-repeat;
     height: image-height('logo.png');
     width: image-width('logo.png');
+  }
+
+  .container {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+      height: 70px;
   }
 }
 
