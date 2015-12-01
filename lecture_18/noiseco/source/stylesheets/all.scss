@@ -24,15 +24,19 @@ header {
 }
 
 a {
+  border-left: 1px solid $navy;
   text-decoration: none;
 }
 
 .login {
   color: $navy;
+  display: flex;
   font-size: 14px;
 
   a {
     color: $skyblue;
+    margin-left: 5px;
+    padding-left: 5px;
   }
 }
 
