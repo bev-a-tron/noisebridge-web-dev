@@ -2,8 +2,17 @@ $navy: #002344;
 $teal: #005275;
 $skyblue: #77A2B5;
 
+/* placeholder rule */
+%image-replace {
+  text-indent: 100%;
+}
+
 header {
   background: $teal;
+
+  h1 {
+    @extend %image-replace;
+  }
 }
 
 nav {
@@ -12,4 +21,8 @@ nav {
 
 footer {
   background: $navy;
+
+  h2 {
+    @extend %image-replace;
+  }
 }
