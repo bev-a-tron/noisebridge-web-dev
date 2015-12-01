@@ -77,4 +77,16 @@ footer {
     width: image-width('logo_small.png');
     margin: 0;
   }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+  }
+
+  .footer__left {
+    display: flex;
+    align-items: center;
+  }
 }
