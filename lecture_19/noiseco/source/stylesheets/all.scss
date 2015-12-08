@@ -12,9 +12,13 @@ $skyblue: #77A2B5;
   white-space: nowrap;
 }
 
+html {
+  background: $navy;
+}
+
 .container {
   margin: 0 auto;
-  width: 960px;
+  max-width: 960px;
 }
 
 a {
@@ -111,6 +115,52 @@ nav {
   }
 }
 
+.details {
+  background: #ECE2C6;
+  color: $navy;
+  padding: 40px 0;
+
+  ul {
+    padding: 0;
+    box-sizing: content-box;
+    margin: 0 auto;
+    list-style: none;
+    width: 75%;
+  }
+
+  li {
+    margin-bottom: 30px;
+    padding-left: 57px;
+    background-repeat: no-repeat;
+
+    &:last-child {
+      margin: 0;
+    }
+  }
+
+  h2 {
+    margin: 0 0 5px;  // top horizontal bottom
+  }
+
+  p {
+    margin: 0;
+  }
+
+  &__detail {
+    &--agile {
+      background-image: image-url('agile.png');
+    }
+
+    &--mobile {
+      background-image: image-url('mobile.png');
+    }
+
+    &--cloud {
+      background-image: image-url('cloud.png');
+    }
+  }
+}
+
 footer {
   background: $navy;
 
@@ -132,5 +182,30 @@ footer {
   .footer__left {
     align-items: center;
     display: flex;
+  }
+
+  nav {
+    font-size: 14px;
+    margin-left: 30px;
+
+    li:first-child a {
+        border-left: none;
+    }
+
+    a {
+      padding: 0 10px;
+      border-left: 1px solid #000;
+      line-height: 1em;
+    }
+  }
+
+  small {
+    color: $skyblue;
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  * {
+    flex-direction: column;
   }
 }
